@@ -1,0 +1,21 @@
+.fastAccess {
+   margin-top: 7px;
+}
+
+.fast-text {
+   font-size: 22px;
+   text-shadow: 3px 5px 20px rgba(0, 0, 0, 1);
+}
+
+.fast-block {
+   display: flex;
+   width: 325px;
+   justify-content: space-between;
+   margin-top: 8px;
+}
+
+.fast-item {
+   width: 72px;
+   height: 72px;
+   background: url('../img/fast-elipse.png') no-repeat;
+}

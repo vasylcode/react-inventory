@@ -1,17 +1,150 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+import Main from './inventory/Main';
+
+const testString = {
+   $type:
+      'System.Collections.Generic.List`1[[ServerRP.GameObjects.GameObject, ServerRP]], System.Private.CoreLib',
+   $values: [
+      {
+         $type: 'ServerRP.GameObjects.Eat, ServerRP',
+         HungredRestore: 1,
+         DrinkRestore: 10,
+         Name: 'Список',
+         Weight: 0.1,
+         Code: '',
+         BasicPrice: 10,
+         Category: 'Eat',
+         Info: 'Главный списочок',
+         Package: true,
+         PackegeCount: 2,
+         PosNumber: 3,
+         Enabled: false,
+         ID: 2,
+         PackegeList: {
+            $type:
+               'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: [5, 6],
+         },
+         PackegeID: -1,
+         PackegeListCategory: null,
+         Hash: 2167236344,
+         Transferability: true,
+         GameEntity: null,
+      },
+      {
+         $type: 'ServerRP.GameObjects.Eat, ServerRP',
+         HungredRestore: 1,
+         DrinkRestore: 10,
+         Name: 'Молоко',
+         Weight: 0.1,
+         Code: '',
+         BasicPrice: 10,
+         Category: 'Eat',
+         Info: 'Молоко - продукт питания, востанавливает 1 ед. голода и 10 ед. жажды',
+         Package: false,
+         PackegeCount: 0,
+         PosNumber: 5,
+         Enabled: false,
+         ID: 2,
+         PackegeList: {
+            $type:
+               'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: [],
+         },
+         PackegeID: 3,
+         PackegeListCategory: null,
+         Hash: 2167236344,
+         Transferability: true,
+         GameEntity: null,
+      },
+      {
+         $type: 'ServerRP.GameObjects.Eat, ServerRP',
+         HungredRestore: 1,
+         DrinkRestore: 10,
+         Name: 'Молоко',
+         Weight: 0.1,
+         Code: '',
+         BasicPrice: 10,
+         Category: 'Eat',
+         Info: 'Молоко2 - продукт питания, востанавливает 1 ед. голода и 10 ед. жажды',
+         Package: false,
+         PackegeCount: 0,
+         PosNumber: 6,
+         Enabled: false,
+         ID: 2,
+         PackegeList: {
+            $type:
+               'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: [],
+         },
+         PackegeID: 3,
+         PackegeListCategory: null,
+         Hash: 2167236344,
+         Transferability: true,
+         GameEntity: null,
+      },
+      {
+         $type: 'ServerRP.GameObjects.GameObject, ServerRP',
+         Name: 'Магазин 9мм х 12',
+         Weight: 0.3,
+         Code: '12x9mm',
+         BasicPrice: 10,
+         Category: 'Ammo_1',
+         Info: 'Магазин с 12 патронами 9мм, подходит к Пистолет',
+         Package: false,
+         PackegeCount: 0,
+         PosNumber: 1,
+         Enabled: false,
+         ID: 1,
+         PackegeList: {
+            $type:
+               'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: [],
+         },
+         PackegeID: -1,
+         PackegeListCategory: null,
+         Hash: 2395771146,
+         Transferability: true,
+         GameEntity: null,
+      },
+      {
+         $type: 'ServerRP.GameObjects.Gun, ServerRP',
+         WeaponHash: 453432689,
+         Name: 'Пистолет',
+         Weight: 0.3,
+         Code: '12x9mm',
+         BasicPrice: 10,
+         Category: 'Weapon_Legal_1',
+         Info:
+            'Пистолет - легальное оружие которое можно приобрнести в магазине, снаряжается магазином с 12 патронами 9мм',
+         Package: false,
+         PackegeCount: 0,
+         PosNumber: 3,
+         Enabled: true,
+         ID: 0,
+         PackegeList: {
+            $type:
+               'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: [],
+         },
+         PackegeID: -1,
+         PackegeListCategory: {
+            $type:
+               'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: ['Ammo_1'],
+         },
+         Hash: 1467525553,
+         Transferability: true,
+         GameEntity: null,
+      },
+   ],
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+   <React.Fragment>
+      <Main query={testString} />
+   </React.Fragment>,
+   document.getElementById('root'),
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

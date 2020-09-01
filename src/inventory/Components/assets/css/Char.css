@@ -1,0 +1,85 @@
+.char {
+   width: 280px;
+   position: relative;
+}
+
+.char-img {
+   position: absolute;
+   left: 35px;
+   top: 53px;
+   pointer-events: none;
+}
+
+.char-items {
+   position: relative;
+}
+
+.item-hat {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-hat.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+}
+
+.item-glasses {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-glasses.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+   top: 96px;
+}
+
+.item-shirt {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-shirt.png') no-repeat center;
+   position: absolute;
+   left: 65px;
+   top: 204px;
+}
+
+.item-vest {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-vest.png') no-repeat center;
+   position: absolute;
+   left: 153px;
+   top: 204px;
+}
+
+.item-ring {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-ring.png') no-repeat center;
+   position: absolute;
+   top: 329px;
+}
+
+.item-shorts {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-shorts.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+   top: 363px;
+}
+
+.item-hand {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-hand.png') no-repeat center;
+   position: absolute;
+   left: 205px;
+   top: 329px;
+}
+
+.item-shoes {
+   width: 75px;
+   height: 75px;
+   background: url('../img/item-shoes.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+   top: 585px;
+}
