@@ -4,17 +4,13 @@ import UploadIcon from '../Inv/UploadIcon';
 let numMap;
 
 function Submenu({ num, array }) {
-   if (num === array.length) {
-      numMap = Array.from(Array(num));
-   } else {
-      numMap = Array.from(Array(array.length));
-   }
+   numMap = Array.from(Array(num));
    return (
       <div className="submenu-items">
          {numMap.map((_, index) => (
             <div className="submenu-item" key={index}>
                {/* {array[index]} */}
-               {<UploadIcon name={array[index]} />}
+               {!!array[index] ? <UploadIcon name={array[index]} /> : false}
             </div>
          ))}
       </div>

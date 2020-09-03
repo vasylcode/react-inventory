@@ -1,11 +1,12 @@
 import React from 'react';
 import './assets/css/Inv.css';
+import './dragndrop';
 
 import Submenu from './Inv/Submenu';
 import UploadIcon from './Inv/UploadIcon';
 
 // функция поиска неймов предметов в массиве array по айди в массиве values, возвращает массив с именами
-function createSubmenuArray(array, values) {
+function findSubmenuItems(array, values) {
    let newArray = values.map(
       (_, index) => array.find((item) => item.PosNumber === values[index]).Name,
    );
@@ -25,7 +26,7 @@ function createArrayToRender(array) {
             item.Package,
             item.PackegeCount,
             item.PackegeList.$values.length !== 0
-               ? createSubmenuArray(array, item.PackegeList.$values)
+               ? findSubmenuItems(array, item.PackegeList.$values)
                : [],
          ]),
    ); // с помощью фильтра перебираем массив и вставляем данные из tempArray в newArray
