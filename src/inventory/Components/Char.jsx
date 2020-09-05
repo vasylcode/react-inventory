@@ -1,6 +1,7 @@
 import React from 'react';
 import './assets/css/Char.css';
 import char from './assets/img/char.png';
+import UploadIcon from './Inv/UploadIcon';
 
 const classes = ['hat', 'glasses', 'shirt', 'vest', 'ring', 'shorts', 'hand', 'shoes'];
 
@@ -16,11 +17,16 @@ function Char({ items }) {
    return (
       <div className="char">
          <div className="char-img">
-            <img src={char} alt="" />
+            <img src={char} alt="logo" />
          </div>
          {createArrayToRender(items).map((item, index) => (
-            <div className={`item-${classes[index]}`} key={`${item}_${index}`}>
-               {item}
+            <div
+               className={`char-item-${index + 1} item-${classes[index]}`}
+               key={`${item}_${index}`}
+               data-pos={index + 1}
+               data-name={classes[index]}
+               data-type="char">
+               {!!item ? <UploadIcon name={item} /> : false}
             </div>
          ))}
          {/* <div className="char-items">

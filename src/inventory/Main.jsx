@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Components/assets/css/Main.css';
+import './Components/dragndrop';
 
 import Char from './Components/Char';
 import Inv from './Components/Inv';

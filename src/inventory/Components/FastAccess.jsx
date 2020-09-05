@@ -1,9 +1,6 @@
 import React from 'react';
 import './assets/css/FastAccess.css';
-
-window.test = function () {
-   return 1;
-};
+import UploadIcon from './Inv/UploadIcon';
 
 // функция подготовки масива к рендеру, исходя из дефолтного массива, который передается из Main.jsx
 function createArrayToRender(array) {
@@ -22,8 +19,12 @@ function FastAccess({ items }) {
             {
                // рендер созданного массива с помощью map метода
                createArrayToRender(items).map((name, index) => (
-                  <div className="fast-item" key={`${name}_${index}`}>
-                     {name}
+                  <div
+                     className="fast-item"
+                     data-pos={index + 9}
+                     data-type="fast"
+                     key={`${name}_${index}`}>
+                     {!!name ? <UploadIcon name={name} /> : false}
                   </div>
                ))
             }

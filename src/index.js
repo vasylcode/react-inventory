@@ -63,7 +63,7 @@ const testString = {
          $type: 'ServerRP.GameObjects.Eat, ServerRP',
          HungredRestore: 1,
          DrinkRestore: 10,
-         Name: 'Молоко',
+         Name: 'Магазин 9мм х 12',
          Weight: 0.1,
          Code: '',
          BasicPrice: 10,
@@ -112,7 +112,7 @@ const testString = {
       {
          $type: 'ServerRP.GameObjects.Gun, ServerRP',
          WeaponHash: 453432689,
-         Name: 'Пистолет',
+         Name: 'Молоко',
          Weight: 0.3,
          Code: '12x9mm',
          BasicPrice: 10,
@@ -121,7 +121,37 @@ const testString = {
             'Пистолет - легальное оружие которое можно приобрнести в магазине, снаряжается магазином с 12 патронами 9мм',
          Package: false,
          PackegeCount: 0,
-         PosNumber: 3,
+         PosNumber: 7,
+         Enabled: true,
+         ID: 0,
+         PackegeList: {
+            $type:
+               'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: [],
+         },
+         PackegeID: -1,
+         PackegeListCategory: {
+            $type:
+               'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib',
+            $values: ['Ammo_1'],
+         },
+         Hash: 1467525553,
+         Transferability: true,
+         GameEntity: null,
+      },
+      {
+         $type: 'ServerRP.GameObjects.Gun, ServerRP',
+         WeaponHash: 453432689,
+         Name: 'Молоко',
+         Weight: 0.3,
+         Code: '12x9mm',
+         BasicPrice: 10,
+         Category: 'Weapon_Legal_1',
+         Info:
+            'Пистолет - легальное оружие которое можно приобрнести в магазине, снаряжается магазином с 12 патронами 9мм',
+         Package: false,
+         PackegeCount: 0,
+         PosNumber: 11,
          Enabled: true,
          ID: 0,
          PackegeList: {

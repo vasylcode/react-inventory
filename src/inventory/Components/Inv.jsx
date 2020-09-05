@@ -1,6 +1,5 @@
 import React from 'react';
 import './assets/css/Inv.css';
-import './dragndrop';
 
 import Submenu from './Inv/Submenu';
 import UploadIcon from './Inv/UploadIcon';
@@ -53,11 +52,17 @@ function Inv({ items }) {
             {
                // Рендер созданного массива с помощью map метода
                createArrayToRender(items).map((name, index) => (
-                  <div className="inventory-block" key={`${name}_${index}`}>
-                     {/* {!!name ? name[0] : false} */}
-                     {!!name ? <UploadIcon name={name[0]} /> : false}
-                     {!!name && name[2] ? <Submenu num={name[3]} array={name[4]} /> : false}
-                  </div>
+                  <React.Fragment key={`${name}_${index}`}>
+                     <div
+                        className="inventory-block"
+                        key={`${name}_${index}`}
+                        data-pos={index + 1}
+                        data-type="inv">
+                        {/* {!!name ? name[0] : false} */}
+                        {!!name ? <UploadIcon name={name[0]} /> : false}
+                        {!!name && name[2] ? <Submenu num={name[3]} array={name[4]} /> : false}
+                     </div>
+                  </React.Fragment>
                ))
             }
          </div>

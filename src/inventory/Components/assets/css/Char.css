@@ -14,6 +14,76 @@
    position: relative;
 }
 
+.char-item-1 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+}
+
+.char-item-2 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+   top: 96px;
+}
+
+.char-item-3 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   left: 65px;
+   top: 204px;
+}
+
+.char-item-4 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   left: 153px;
+   top: 204px;
+}
+
+.char-item-5 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   top: 329px;
+}
+
+.char-item-6 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+   top: 363px;
+}
+
+.char-item-7 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   left: 205px;
+   top: 329px;
+}
+
+.char-item-8 {
+   width: 75px;
+   height: 75px;
+   background: url('../img/fast-elipse.png') no-repeat center;
+   position: absolute;
+   left: 108px;
+   top: 585px;
+}
+
 .item-hat {
    width: 75px;
    height: 75px;
