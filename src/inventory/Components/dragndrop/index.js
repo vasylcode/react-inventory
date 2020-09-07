@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+export function loadFromMain() {
    function createObject(name, enabled, oldpos, newpos) {
       let itemObject = {
          name: name,
@@ -151,4 +151,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
       item.addEventListener('dragover', dragOver, false);
       item.addEventListener('drop', drop, false);
    });
-});
+}

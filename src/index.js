@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Main from './inventory/Main';
+import { loadFromMain } from './inventory/Components/dragndrop';
 
-const testString = {
+/* const testString = {
    $type:
       'System.Collections.Generic.List`1[[ServerRP.GameObjects.GameObject, ServerRP]], System.Private.CoreLib',
    $values: [
@@ -170,11 +171,18 @@ const testString = {
          GameEntity: null,
       },
    ],
+}; */
+
+window.openInventory = function (items, currentWeight, maxWeight) {
+   ReactDOM.render(
+      <React.Fragment>
+         <Main items={items} currentWeight={currentWeight} maxWeight={maxWeight} />
+      </React.Fragment>,
+      document.getElementById('root'),
+   );
+   loadFromMain();
 };
 
-ReactDOM.render(
-   <React.Fragment>
-      <Main query={testString} />
-   </React.Fragment>,
-   document.getElementById('root'),
-);
+window.closeInventory = function () {
+   ReactDOM.render(<React.Fragment></React.Fragment>, document.getElementById('root'));
+};

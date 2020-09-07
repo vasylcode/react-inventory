@@ -32,7 +32,7 @@ function createArrayToRender(array) {
    return newArray;
 }
 
-function Inv({ items }) {
+function Inv({ items, currentWeight, maxWeight }) {
    return (
       <div className="inv">
          <div className="inv-header">
@@ -41,7 +41,7 @@ function Inv({ items }) {
             <div className="header-info">
                <div className="info-text">Инвентарь</div>
                <div className="info-count">
-                  <span>4</span>/40
+                  <span>{currentWeight}</span>/{maxWeight}
                </div>
             </div>
          </div>

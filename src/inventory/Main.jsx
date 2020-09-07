@@ -1,14 +1,13 @@
 import React from 'react';
 
 import './Components/assets/css/Main.css';
-import './Components/dragndrop';
 
 import Char from './Components/Char';
 import Inv from './Components/Inv';
 import FastAccess from './Components/FastAccess';
 
-window.Main = function (props) {
-   const arrays = props.query.$values;
+function Main({ items, currentWeight, maxWeight }) {
+   const arrays = items.$values;
    const enabled = arrays.filter((element) => element.Enabled); // предметы одетые/быстрого доступа
    const invItems = arrays.filter((element) => !element.Enabled); // предметы которые пойдут в основной инвентарь
 
@@ -16,12 +15,12 @@ window.Main = function (props) {
    const fastItems = enabled.filter((item) => item.PosNumber >= 9);
 
    return (
-      <div className="wrapper">
+      <div className="wrapper" id="wrapper">
          <Char items={charItems} />
-         <Inv items={invItems} />
+         <Inv items={invItems} currentWeight={currentWeight} maxWeight={maxWeight} />
          <FastAccess items={fastItems} />
       </div>
    );
-};
+}
 
-export default window.Main;
+export default Main;
