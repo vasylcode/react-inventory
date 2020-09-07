@@ -66,6 +66,10 @@
    align-items: center;
 }
 
+.submenu-block {
+   display: flex !important;
+}
+
 .inventory-block:not(:hover) .submenu-items {
    display: none;
 }

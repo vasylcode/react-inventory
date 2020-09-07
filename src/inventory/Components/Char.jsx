@@ -9,7 +9,7 @@ const classes = ['hat', 'glasses', 'shirt', 'vest', 'ring', 'shorts', 'hand', 's
 function createArrayToRender(array) {
    const defaultChatSize = 8; // стандартный размер персонажа
    let newArray = Array.from(Array(defaultChatSize)); // создаем новый массив с пустыми клетками который будем возвращать
-   array.filter((item) => (newArray[item.PosNumber - 1] = item.Name)); // с помощью фильтра перебираем массив и вставляем данные из array в newArray
+   array.filter((item) => (newArray[item.PosNumber - 1] = [item.Name, item.Info])); // с помощью фильтра перебираем массив и вставляем данные из array в
    return newArray;
 }
 
@@ -24,9 +24,9 @@ function Char({ items }) {
                className={`char-item-${index + 1} item-${classes[index]}`}
                key={`${item}_${index}`}
                data-pos={index + 1}
-               data-name={classes[index]}
+               data-class={classes[index]}
                data-type="char">
-               {!!item ? <UploadIcon name={item} /> : false}
+               {!!item ? <UploadIcon name={item[0]} desc={item[1]} /> : false}
             </div>
          ))}
          {/* <div className="char-items">

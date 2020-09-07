@@ -36,11 +36,8 @@ function Inv({ items }) {
    return (
       <div className="inv">
          <div className="inv-header">
-            <div className="header-name">Баллистический шлем</div>
-            <div className="header-desc">
-               Баллистический шлем с рельсовой планкой для универсального фонарика и очков ночного
-               видения. Используется специально для защиты головы в боевых условиях.
-            </div>
+            <div className="header-name"></div>
+            <div className="header-desc"></div>
             <div className="header-info">
                <div className="info-text">Инвентарь</div>
                <div className="info-count">
@@ -59,8 +56,12 @@ function Inv({ items }) {
                         data-pos={index + 1}
                         data-type="inv">
                         {/* {!!name ? name[0] : false} */}
-                        {!!name ? <UploadIcon name={name[0]} /> : false}
-                        {!!name && name[2] ? <Submenu num={name[3]} array={name[4]} /> : false}
+                        {!!name ? <UploadIcon name={name[0]} desc={name[1]} /> : false}
+                        {!!name && name[2] ? (
+                           <Submenu num={name[3]} array={name[4]} desc={name[1]} />
+                        ) : (
+                           false
+                        )}
                      </div>
                   </React.Fragment>
                ))

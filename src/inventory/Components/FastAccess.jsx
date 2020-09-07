@@ -7,7 +7,9 @@ function createArrayToRender(array) {
    const defaultFastSize = 4; // стандартный размер быстрого меню
    const defaultChatSize = 8; // стандартный размер персонажа
    let newArray = Array.from(Array(defaultFastSize)); // создаем новый массив с пустыми клетками который будем возвращать
-   array.filter((item) => (newArray[item.PosNumber - (defaultChatSize + 1)] = item.Name)); // с помощью фильтра перебираем массив и вставляем данные из array в newArray
+   array.filter(
+      (item) => (newArray[item.PosNumber - (defaultChatSize + 1)] = [item.Name, item.Info]),
+   ); // с помощью фильтра перебираем массив и вставляем данные из array в newArray
    return newArray;
 }
 
@@ -24,7 +26,7 @@ function FastAccess({ items }) {
                      data-pos={index + 9}
                      data-type="fast"
                      key={`${name}_${index}`}>
-                     {!!name ? <UploadIcon name={name} /> : false}
+                     {!!name ? <UploadIcon name={name[0]} desc={name[1]} /> : false}
                   </div>
                ))
             }
