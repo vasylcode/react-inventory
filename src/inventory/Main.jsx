@@ -16,9 +16,13 @@ function Main({ items, currentWeight, maxWeight }) {
 
    return (
       <div className="wrapper" id="wrapper">
+         <div className="drop-up"></div>
          <Char items={charItems} />
          <Inv items={invItems} currentWeight={currentWeight} maxWeight={maxWeight} />
-         <FastAccess items={fastItems} />
+         <div className="down">
+            <FastAccess items={fastItems} />
+            <div className="drop-down"></div>
+         </div>
       </div>
    );
 }

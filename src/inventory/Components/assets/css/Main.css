@@ -23,5 +23,20 @@ body {
 }
 
 .wrapper {
-   margin: 120px 0 0 140px;
+   margin: 0 0 0 140px;
+}
+
+.down {
+   display: flex;
+}
+
+.drop-up {
+   margin-left: 365px;
+   height: 120px;
+   width: 910px;
+}
+
+.drop-down {
+   height: 260px;
+   width: 910px;
 }

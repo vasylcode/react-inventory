@@ -186,3 +186,5 @@ window.openInventory = function (items, currentWeight, maxWeight) {
 window.closeInventory = function () {
    ReactDOM.render(<React.Fragment></React.Fragment>, document.getElementById('root'));
 };
+
+//window.openInventory(testString, 5, 40);

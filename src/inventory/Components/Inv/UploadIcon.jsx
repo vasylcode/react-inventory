@@ -1,6 +1,6 @@
 import React from 'react';
 
-function UploadIcon({ name, desc }) {
+function UploadIcon({ name, desc, object }) {
    return (
       <img
          className="inv-icon"
@@ -8,6 +8,7 @@ function UploadIcon({ name, desc }) {
          alt={name}
          data-name={name}
          data-desc={desc}
+         data-object={object}
       />
    );
 }

@@ -6,9 +6,10 @@ import UploadIcon from './Inv/UploadIcon';
 
 // функция поиска неймов предметов в массиве array по айди в массиве values, возвращает массив с именами
 function findSubmenuItems(array, values) {
-   let newArray = values.map(
-      (_, index) => array.find((item) => item.PosNumber === values[index]).Name,
-   );
+   let newArray = values.map((_, index) => [
+      array.find((item) => item.PosNumber === values[index]).Name,
+      JSON.stringify(array.find((item) => item.PosNumber === values[index])),
+   ]);
    return newArray;
 }
 
@@ -27,6 +28,7 @@ function createArrayToRender(array) {
             item.PackegeList.$values.length !== 0
                ? findSubmenuItems(array, item.PackegeList.$values)
                : [],
+            JSON.stringify(item),
          ]),
    ); // с помощью фильтра перебираем массив и вставляем данные из tempArray в newArray
    return newArray;
@@ -56,9 +58,22 @@ function Inv({ items, currentWeight, maxWeight }) {
                         data-pos={index + 1}
                         data-type="inv">
                         {/* {!!name ? name[0] : false} */}
-                        {!!name ? <UploadIcon name={name[0]} desc={name[1]} /> : false}
+                        {!!name ? (
+                           <UploadIcon
+                              name={name[0]}
+                              desc={name[1]}
+                              object={!!name ? name[5] : null}
+                           />
+                        ) : (
+                           false
+                        )}
                         {!!name && name[2] ? (
-                           <Submenu num={name[3]} array={name[4]} desc={name[1]} />
+                           <Submenu
+                              num={name[3]}
+                              array={name[4]}
+                              desc={name[1]}
+                              object={!!name ? name[4][index] : null}
+                           />
                         ) : (
                            false
                         )}

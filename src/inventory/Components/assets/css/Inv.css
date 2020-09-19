@@ -3,7 +3,7 @@
    background: url('../img/inv-background.png') no-repeat;
    width: 842px;
    min-height: 650px;
-   padding: 30px 32px;
+   padding: 30px 32px 19px 32px;
 }
 
 .header-name {
